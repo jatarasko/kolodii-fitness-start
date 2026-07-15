@@ -21,9 +21,9 @@ export default function StartPage() {
         <div className="start-hero-copy"><p className="start-kicker">З чого почати</p><h1>Обери підтримку, яка потрібна тобі зараз</h1><p>Готові матеріали, короткий курс або персональна робота — без жорстких дієт і зайвого ускладнення.</p></div>
         <figure className="start-hero-photo"><img src="/photos/taras-plate.jpg" alt="Тарас Колодій тримає модель збалансованої тарілки" /></figure>
         <nav className="start-routes" id="formats" aria-label="Обрати рівень підтримки">
-          <a href="#self"><small>01 · самостійно</small><strong>Потрібен готовий комплект</strong><span>Книга рецептів + PDF-трекер →</span></a>
+          <a href={routes.starterBundle} target="_blank" rel="noreferrer"><small>01 · самостійно</small><strong>Потрібен готовий комплект</strong><span>Книга рецептів + PDF-трекер ↗</span></a>
           <a href="#courses"><small>02 · 5 днів</small><strong>Хочу розібратися в основах</strong><span>Курси про їжу та рух →</span></a>
-          <a href="#support"><small>03 · персонально</small><strong>Потрібен план і підтримка</strong><span>Онлайн-супровід →</span></a>
+          <a href={routes.supportPage} target="_blank" rel="noreferrer"><small>03 · персонально</small><strong>Потрібен план і підтримка</strong><span>Онлайн-супровід ↗</span></a>
         </nav>
       </section>
 

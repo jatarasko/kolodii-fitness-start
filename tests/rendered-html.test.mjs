@@ -30,10 +30,13 @@ test("contains only configured commercial routes and no placeholders", async () 
   assert.match(html, /https:\/\/t\.me\/Kolo_Dii_bot\?start=course_healthy_plate/);
   assert.match(html, /https:\/\/t\.me\/Kolo_Dii_bot\?start=course_active/);
   assert.match(html, /https:\/\/t\.me\/Kolo_Dii_bot\?start=book_tracker/);
+  assert.match(html, /href="https:\/\/t\.me\/Kolo_Dii_bot\?start=book_tracker"[^>]*><small>01 · самостійно/);
   assert.match(html, /https:\/\/t\.me\/kolodiifitness_bot\?start=notion_top/);
   assert.doesNotMatch(html, /https:\/\/t\.me\/kolo_tarilky_bot/);
   assert.doesNotMatch(html, /https:\/\/t\.me\/kolo_ruhu_bot/);
   assert.match(html, /https:\/\/kolodii-fitness-coaching\.jatarasko\.chatgpt\.site/);
+  assert.match(html, /href="https:\/\/kolodii-fitness-coaching\.jatarasko\.chatgpt\.site"[^>]*><small>03 · персонально/);
+  assert.doesNotMatch(html, /href="#self"|href="#support"/);
   assert.doesNotMatch(html, /MENU_BOOK_URL|TRACKER_URL|STARTER_BUNDLE_URL|HEALTHY_PLATE_URL|MOVEMENT_COURSE_URL|SUPPORT_PAGE_URL|SUPPORT_BOT_URL/);
   assert.doesNotMatch(html, /\[УТОЧНИТИ|\[ДОДАТИ|href=""|href="#"/);
 });
