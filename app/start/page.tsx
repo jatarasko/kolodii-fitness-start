@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 function ExternalLink({ href, children, eventName, secondary = false }: { href: string; children: React.ReactNode; eventName: string; secondary?: boolean }) {
-  return <a className={`start-button${secondary ? " start-button-secondary" : ""}`} href={href} target="_blank" rel="noreferrer" data-meta-event={eventName}>{children}<Arrow /></a>;
+  return <a className={`start-button${secondary ? " start-button-secondary" : ""}`} href={href} target="_blank" rel="noreferrer" data-meta-event={eventName} data-meta-standard={eventName === "support_application_click" ? "Lead" : undefined}>{children}<Arrow /></a>;
 }
 
 export default function StartPage() {
