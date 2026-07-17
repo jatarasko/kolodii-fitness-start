@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
+import { MetaPixel } from "./meta-pixel";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -15,5 +16,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="uk"><body>{children}</body></html>;
+  return <html lang="uk"><body>{children}<MetaPixel /><noscript><img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=3580634968754068&ev=PageView&noscript=1" alt="" /></noscript></body></html>;
 }
